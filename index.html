@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NABASAN CASH BALANCE</title>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 100vh;
+}
+
+table,
+tr,
+th {
+border: 1px solid black;
+border-collapse: collapse;
+}
+th1 {
+    
+    text-align: center;
+    text-size-adjust: 40px;
+    width: 200px;
+    background: rgb(81, 81, 226);
+    color: #fff;
+    
+}
+</style>
+<script>
+    function multiply()
+    {
+      var note1 = document.getElementById("note1").value;
+      var Quantity1 = document.getElementById("Quantity1").value;
+      ver total1 = parseFloat(note1)*parseFloat(Quantity1);
+      document.getElementById("total1").value= total1;
+
+    }
+</script>
+
+</head>
+<body >
+<table >
+    <tr>
+<th></th><th colspan="8"> NABASAN CASH BALANCE </th>
+</tr>
+<tr>
+<th>SL NO</th>
+<th> NOTE</th>
+<th>Quantity</th>
+<th >TOTAL AMOUNT </th>
+<th>SL NO</th>
+<th> DAMAGE NOTE</th>
+<th> Quantity</th>
+<th >TOTAL AMOUNT </th>
+</tr>
+<tr>
+<th> 1</th>
+<th><input type="number"  value="0"name="note1" id="note1" /></th>
+<th><input type="number"  value="0" name="Quantity1" id="Quantity1" /></th>
+<th><input type="number"  name="total1" id="total1" /></th>
+<th> 1</th>
+<th> 2000</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 2</th>
+<th><input type="number" readonly value="500" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 2</th>
+<th> 500</th>
+<th><input type="number"  required>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 3</th>
+<th><input type="number" readonly value="200" id="price_sugar" /></th>
+<th><input type="number"  required>
+<th id="total">0</th>
+<th> 3</th>
+<th> 100</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 4</th>
+<th><input type="number" readonly value="100" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 4</th>
+<th> 50</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 5</th>
+<th><input type="number" readonly value="50" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 5</th>
+<th> 20</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 6</th>
+<th><input type="number" readonly value="20" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 6</th>
+<th> 10</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 7</th>
+<th><input type="number" readonly value="10" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 7</th>
+<th> ANUP BALANCE </th>
+<th><input type="number"  required></th>
+</tr>
+<tr>
+<th> 8</th>
+<th><input type="number" readonly value="5" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 8</th>
+<th> DIPIKA BALANCE</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 9</th>
+<th><input type="number" readonly value="2" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th> 9</th>
+<th> LOAN PAYMENT</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 10</th>
+<th><input type="number" readonly value="1" id="price_sugar" /></th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th>10</th>
+<th> 1</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 11</th>
+<th> BC CASH BALANCE</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th>11</th>
+<th> EXC </th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 12</th>
+<th> AC CASH BALANCE</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th>12</th>
+<th> TOTAL DAMAGE NOTE</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+</tr>
+<tr>
+<th> 13</th>
+<th> PENDING CASH</th>
+<th><input type="number"  required></th>
+<th id="total">0</th>
+<th>13</th>
+<th>OD</th>
+<th><input type="number" ></th>
+<th id="total">0</th>
+</tr>
+
+</table>
+</body>
+
+</html>
