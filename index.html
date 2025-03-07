@@ -147,6 +147,52 @@ position: absolute;
   .header-right {
     float: none;
   }
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 	
 
     </style>
@@ -159,42 +205,30 @@ position: absolute;
   <a href="#default" class="logo" style="font-size:25px;color:blue">SBI Kiosk Sarisha Group</a>
   <div class="header-right">
     <a href="https://script.google.com/macros/s/AKfycbwnNzyXFDWrmuBIPxmRKI1eNaqUWRLTP-JGYOS3bgo/dev" class="w3-bar-item w3-button" style="font-size:20px;color:blue">Home</a>
- <ul>
-      <li><a href="nabasan.html">home</a></li>
-      <li>
-        <a href="menuhtml.html">CASH </a>
-        <ul class="dropdown">
-          <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit?gid=142350554#gid=142350554">NABASAN CASH</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=1906461957">ASHRAMMORE CASH</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=615215702">SEORAHATI CASH</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit?gid=142137424#gid=142137424">MANKHAND CASH</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">PASSBOOK </a>
-        <ul class="dropdown">
-          <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=1327500264">NABASAN PASSBOOK</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=1131385280">ASHRAMMORE PASSBOOK</a></li>
-          <li><a href="https://docs.google.com/spreadsheets/d/10Izc4srmR7Ea8GJuHPZ-SrfDQvipconZ/edit#gid=688966498">SEORAHATI PASSBOOK</a></li>
-          <li><a href="#">MANKHAND PASSBOOK</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Other Service </a>
-        <ul class="dropdown">
-          <li><a href="https://vibsranbc.org/csp/index.php">BC Loging Page VIB</a></li>
-          <li><a href="https://customer.epson.co.in/customer/repair.do#/servicerequest/IN">Printer Call Loge</a></li>
-          <li><a href="">TDR Calculater</a></li>
-          <li><a href="#">MANKHAND PASSBOOK</a></li>
-        </ul>
-      </li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1LrrdYN4Wwpk7cImQ6muzv-n_FgCzRL_G/edit#gid=1071836722">TOTAL AC 32290324</a></li>
-      <li><a href="href="https://docs.google.com/spreadsheets/d/1osivwpHzfvwdS47jEaySnd-WGcnPmdrN8cbgdZtzRyw/edit?resourcekey#gid=160094801">AC REGISTER</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit#gid=615215702">Register Data Entr</a></li>
-      <li><a href="https://script.google.com/macros/s/AKfycbwuJaQv48VWHZMwEUt_VwMxYQnC92hb0O4PAxkI_V-CCejnTUdKUEG3CR-smugxFkoT/exec">Fi Ligacy Data</a></li>
-      <li><a href="https://drive.google.com/drive/folders/1DzezLikMAop-j_LYA_kEwUUzZtsP0wCX">Pdf Folder</a></li>
-    </ul>
-      
+ <a class="dropdown">
+  <button class="dropbtn">Cash Report</button>
+  <a class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </a>
+</a>
+	<a class="dropdown">
+  <button class="dropbtn">Passbook Data</button>
+  <a class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </a>
+</a>
+<a class="dropdown">
+  <button class="dropbtn">Account</button>
+  <a class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </a>
+</a>
     <a href="https://kiosk.bank.sbi/" class="w3-bar-item w3-button"  style="font-size:20px;color:blue">Kiosk Login</a>
   <a href="https://mail.google.com/mail/u/0/#inbox" class="fa-mail-forward"  style="font-size:20px;color:#a6112e">Email </a>
 	  <a href="https://main.vibsranbc.org/csp-login"  style="font-size:20px;color:#a6112e" class="w3-bar-item w3-button">Bc Login</a>
