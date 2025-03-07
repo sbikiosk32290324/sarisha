@@ -61,15 +61,15 @@ function multiply()
 	
 	  
 	  var total1= document.getElementById("total1").value;
-	    var total1= document.getElementById("total3").value;
-	    var total1= document.getElementById("total5").value;
-	    var total1= document.getElementById("total7").value;
-	    var total1= document.getElementById("total9").value;
-	    var total1= document.getElementById("total11").value;
-	    var total1= document.getElementById("total13").value;
-	    var total1= document.getElementById("total14").value;
-	    var total1= document.getElementById("total15").value;
-	    var total1= document.getElementById("total16").value;
+	    var total3= document.getElementById("total3").value;
+	    var total5= document.getElementById("total5").value;
+	    var total7= document.getElementById("total7").value;
+	    var total9= document.getElementById("total9").value;
+	    var total11= document.getElementById("total11").value;
+	    var total13= document.getElementById("total13").value;
+	    var total14= document.getElementById("total14").value;
+	    var total15= document.getElementById("total15").value;
+	    var total16= document.getElementById("total16").value;
 	  
 	  
 	 
