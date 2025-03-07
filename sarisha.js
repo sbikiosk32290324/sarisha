@@ -79,4 +79,18 @@ function multiply()
 	  document.getElementById("all_total").value=amtg;
 	  
 	  
-	 
+	document.getElementById("Quantity1").max = "100";
+	    document.getElementById("Quantity3").max = "300";
+	    document.getElementById("Quantity5").max = "500";
+	    document.getElementById("Quantity7").max = "500";
+	    document.getElementById("Quantity9").max = "500";
+	     document.getElementById("Quantity11").max = "500";
+	     document.getElementById("Quantity13").max = "100";
+	     document.getElementById("Quantity14").max = "100";
+	     document.getElementById("Quantity15").max = "100";
+	     document.getElementById("Quantity16").max = "100";
+	    
+	    
+	
+	    
+	  } 
