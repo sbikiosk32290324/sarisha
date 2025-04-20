@@ -26,6 +26,31 @@ position: fixed;
    left:84%;
   }
   
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 20px;
+			
+        }
+
+        #pie-chart {
+            margin-top: 20px;
+            width: 400px;
+            height: 400px;
+        }
+		button {
+    padding: 10px 20px;
+  }
+  
 .sidebar {
   margin: 0;
   padding: 0;
@@ -77,27 +102,8 @@ div.content {
     float: none;
   }
 }
+
 .custom-alert {
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    border: 1px solid #77bb77;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	 background:#900C3F ;
-    
-    margin: auto;
-   
-   
-    
-    text-align: center; 
-   
-}
-.custom-alert1 {
     visibility: hidden;
     position: fixed;
     top: 50%;
@@ -121,19 +127,16 @@ div.content {
 .alert-content {
     text-align: center;
 }
-
-
 .open-btn {
     color: #fff;
     background: green;
     border: none;
-    padding: 40px,30px;
+    padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-	margin:50px;
-	position: fixed;
-	left: 0%;
 }
+
+
 
 .button-container {
     margin-top: 15px;
@@ -178,7 +181,7 @@ text-align: left;
 
 h2, h3 {
    background-color:ff5733; /* Green */
-color: #ff5733;
+color: green;
 font-size:12px;
 border: 2px;
 
@@ -195,7 +198,7 @@ label {
     display: block;
     font-weight: bold;
     margin-top: 10px;
-	color: #ff5733;
+	color: green;
 }
 
 input {
@@ -208,7 +211,7 @@ input {
 }
 
 button {
-    background-color: green;
+    background-color: blue;
     color: #ff5733;
     padding: 10px 20px;
     border: none;
@@ -224,7 +227,7 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    color: #ff5733;
+    color: green;
 font-size:12px;
 border: 2px;
 
@@ -232,8 +235,8 @@ text-align: center;
 }
 
 th {
-    background-color: #007BFF;
-    color: #ff5733;
+    
+    color: green;
 font-size:12px;
 border: 2px;
 
@@ -242,9 +245,9 @@ text-align: center;
 .btn1
 {
 	background-color:#900C3F ;
-color: #ff5733;
+color: green;
 font-size: 12px;
-
+font-weight: bold;
 
 text-align: center;
   text-decoration: none;
@@ -433,6 +436,60 @@ function calculateEMI() {
 	document.getElementById("tin").innerText = tin.toFixed(2);
 	document.getElementById("tpay").innerText = tpay.toFixed(2);
 }
+function calculateRD() {
+    // Get input values
+    var investment = parseFloat(document.getElementById("investment").value);
+    var rate = parseFloat(document.getElementById("rate").value);
+    var tenure = parseInt(document.getElementById("tenure").value);
+
+    // Calculate maturity amount and interest earned
+    var maturityAmount = investment * tenure + (investment * (tenure * (tenure + 1))) / 2 * (rate / 100) / 12;
+    var interestEarned = maturityAmount - (investment * tenure);
+
+    // Display the results
+    document.getElementById("maturityAmount").textContent = maturityAmount.toFixed(2);
+    document.getElementById("interestEarned").textContent = interestEarned.toFixed(2);
+
+    // Generate a pie chart
+    var ctx = document.getElementById("pie-chart").getContext("2d");
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Investment Amount', 'Interest Earned'],
+            datasets: [{
+                data: [investment * tenure, interestEarned],
+                backgroundColor: ['#36a2eb', '#ff6384'],
+            }]
+        }
+    });
+}
+function calculateFD() {
+    // Get input values
+    var principal = parseFloat(document.getElementById("principal").value);
+    var rat = parseFloat(document.getElementById("rat").value);
+    var timePeriod = parseInt(document.getElementById("time").value);
+
+    // Calculate maturity amount and interest earned
+    var maturity = principal * (1 + rat / 100) ** timePeriod;
+    var interest = maturity - principal;
+
+    // Display the results
+    document.getElementById("maturity").textContent = maturity.toFixed(2);
+    document.getElementById("interest").textContent = interest.toFixed(2);
+
+    // Generate a pie chart
+    var ctx = document.getElementById("pie-chart").getContext("2d");
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Principal Amount', 'Interest Earned'],
+            datasets: [{
+                data: [principal, interestEarned],
+                backgroundColor: ['#36a2eb', '#ff6384'],
+            }]
+        }
+    });
+}
 
 </script>
 <body>
@@ -451,6 +508,8 @@ function calculateEMI() {
  <div class="sidebar">
  
   <a onclick="customAlert()"style="font-size:20px;color:blue">Note Count</a>
+  <a onclick="customAlert3()"style="font-size:20px;color:blue">RD Calculater </a>
+  <a onclick="customAlert4()"style="font-size:20px;color:blue">FD Calculater </a>
   <a onclick="Alert1()"style="font-size:20px;color:blue">EMI Calculater </a>
   <a href="https://sbikiosk32290324.github.io/nabasan2/log.html" class="w3-bar-item w3-button" style="font-size:20px;color:blue" target="_blank">Nabasan Cash</a>
 
@@ -562,7 +621,7 @@ function calculateEMI() {
             </div>
         </div>
     </div>
- <div id="alert1" class="custom-alert1">
+ <div id="alert1" class="custom-alert">
         <div class="alert-content">
             <span id="alert-message1"></span>
 
@@ -571,22 +630,26 @@ function calculateEMI() {
          <h2>Loan EMI Calculator</h2>
 
         <form>
-            <label>Loan Amount (₹):</label>
+		<div class="input-group">
+            <label for="investment">Loan Amount (₹):</label>
             <input type="number" id="loanAmount" placeholder="Enter amount" required>
-
-            <label>Interest Rate (% per year):</label>
+        </div>
+            <div class="input-group">
+            <label for="investment">Interest Rate (% per year):</label>
             <input type="number" id="interestRate" placeholder="Enter rate" required>
-
-            <label>Loan Tenure (Months):</label>
+        </div>
+<div class="input-group">
+            <label for="investment">Loan Tenure (Months):</label>
             <input type="number" id="loanTenure" placeholder="Enter months" required>
-            <br>
+        </div>
+           
             <button type="button" onclick="calculateEMI()">Calculate EMI</button>
         </form>
-
+<div class="result">
         <h3>Monthly EMI: ₹<span id="emiResult">0</span></h3>
 		<h3>Total Intrast: ₹<span id="tin">0</span></h3>
 		<h3>Total Pay: ₹<span id="tpay">0</span></h3>
-		
+		</div>
         
      
     </div>
@@ -600,7 +663,68 @@ function calculateEMI() {
         </div>
     </div>
 	
-	
+	<div id="custom-alert3" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message3"></span>
+
+<h2>RD Calculator</h2>
+        <div class="input-group">
+            <label for="investment">Monthly Investment:</label>
+            <input type="number" id="investment" required>
+        </div>
+        <div class="input-group">
+            <label for="rate">Interest Rate (%):</label>
+            <input type="number" id="rate" required>
+        </div>
+        <div class="input-group">
+            <label for="tenure">Tenure (months):</label>
+            <input type="number" id="tenure" required>
+        </div>
+        <button onclick="calculateRD()" class="btn btn-primary btn-lg">Calculate</button>
+        <div class="result">
+            <p>Maturity Amount: <span id="maturityAmount"></span></p>
+            <p>Interest Earned: <span id="interestEarned"></span></p>
+        </div>
+    
+                
+                <button id="cancel-btn3" 
+                    onclick="cancelAction3()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+<div id="custom-alert4" class="custom-alert">
+        <div class="alert-content">
+            <span id="alert-message4"></span>
+
+<h2>FD Calculator</h2>
+        
+        <div class="input-group">
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal" required>
+        </div>
+        <div class="input-group">
+            <label for="rate">Interest Rate (%):</label>
+            <input type="number" id="rat" required>
+        </div>
+        <div class="input-group">
+            <label for="time">Time Period (years):</label>
+            <input type="number" id="time" required>
+        </div>
+        <button onclick="calculateFD()" class="btn btn-primary btn-lg">Calculate</button>
+        <div class="result">
+          <p>Maturity Amount: <span id="maturity"></span></p>
+          <p>Interest Earned: <span id="interest"></span></p>
+        </div>
+                
+                <button id="cancel-btn4" 
+                    onclick="cancelAction4()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
 
    
 	<script>
@@ -641,7 +765,45 @@ function calculateEMI() {
             document.body.
                 style.backgroundColor = "#fff"
         }
+        function customAlert3() {
+            const message = 
+                "RD Calculate";
+            document.getElementById("alert-message3").
+                innerText = message;
+            document.getElementById("custom-alert3").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
+
         
+
+        function cancelAction3() {
+            document.getElementById("custom-alert3").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+		function customAlert4() {
+            const message = 
+                "FD Calculate";
+            document.getElementById("alert-message4").
+                innerText = message;
+            document.getElementById("custom-alert4").
+                style.visibility = "visible";
+            document.body.
+                style.backgroundColor = "rgb(49 45 45 / 45%)";
+        }
+
+        
+
+        function cancelAction4() {
+            document.getElementById("custom-alert4").
+                style.visibility = "hidden";
+            document.body.
+                style.backgroundColor = "#fff"
+        }
+		
     </script>
    
 
