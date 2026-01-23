@@ -1662,24 +1662,24 @@ function calculateFD() {
 
         <form>
 		<div class="input-group">
-            <label for="investment">Loan Amount (₹):</label>
+            <label class="top" for="investment">Loan Amount (₹):</label>
             <input type="number" id="loanAmount" placeholder="Enter amount" required>
         </div>
             <div class="input-group">
-            <label for="investment">Interest Rate (% per year):</label>
+            <label class="top" for="investment">Interest Rate (% per year):</label>
             <input type="number" id="interestRate" placeholder="Enter rate" required>
         </div>
 <div class="input-group">
-            <label for="investment">Loan Tenure (Months):</label>
+            <label class="top" for="investment">Loan Tenure (Months):</label>
             <input type="number" id="loanTenure" placeholder="Enter months" required>
         </div>
            
             <button type="button" class="button button4" onclick="calculateEMI()">Calculate EMI</button>
         </form>
 <div class="result">
-        <h3>Monthly EMI: ₹<span id="emiResult">0</span></h3>
-		<h3>Total Intrast: ₹<span id="tin">0</span></h3>
-		<h3>Total Pay: ₹<span id="tpay">0</span></h3>
+        <h3 class="top">Monthly EMI: ₹<span class="top" id="emiResult">0</span></h3>
+		<h3 class="top">Total Intrast: ₹<span class="top" id="tin">0</span></h3>
+		<h3 class="top">Total Pay: ₹<span class="top" id="tpay">0</span></h3>
 		</div>
         
      
@@ -1752,7 +1752,7 @@ function calculateFD() {
  <td ><input  type="number"id="nt5"  readonly class="note"  value="20"readonly></td>
  <td><input type="number"  id="Qt5" onchange="multiply1(this)"  class="needs-validation" /></td>
  <td><input type="number" id="tot5" class="note"   readonly value="0" ></td>
- <td class="result"><p>Maturity Amount: <span id="maturityAmount"></span></p> </td>
+ <td class="result"><p class="top">Maturity Amount: <span class="top" id="maturityAmount"></span></p> </td>
  
  </tr>
  <tr>
@@ -1760,7 +1760,7 @@ function calculateFD() {
  <td ><input  type="number"id="nt6"  readonly class="note"  value="10"readonly></td>
  <td><input type="number"  id="Qt6" onchange="multiply1(this)" class="needs-validation"  /></td>
  <td><input type="number" id="tot6" class="note"   readonly value="0" ></td>
- <td><p>Interest Earned: <span id="interestEarned"></span></p></td>
+ <td><p class="top">Interest Earned: <span class="top" id="interestEarned"></span></p></td>
  </tr>
  <tr>
  <th class="top" name="Item" readonly> 7</th>
@@ -1813,23 +1813,23 @@ function calculateFD() {
 <h2>FD Calculator</h2>
         <table>
         <tr class="input-group">
-           <th> <label  for="principal">Principal Amount:</label></th>
+           <th> <label class="top"  for="principal">Principal Amount:</label></th>
            <th> <input class="needs-validation"  type="number" id="principal" required></th>
         </tr>
         <tr class="input-group">
-           <th> <label for="rate">Interest Rate (%):</label></th>
+           <th> <label class="top" for="rate">Interest Rate (%):</label></th>
            <th> <input class="needs-validation"  type="number" id="rat" required></th>
         </tr>
         <tr class="input-group">
-           <th> <label  for="time">Time Period (years):</label></th>
+           <th> <label class="top" for="time">Time Period (years):</label></th>
            <th> <input class="needs-validation" type="number" id="time" required></th>
         </tr>
         <tr>
         <th><button onclick="calculateFD()" class="button button4">Calculate</button></th>
          </table>
         <div class="result">
-          <p>Maturity Amount: <span id="maturity"></span></p>
-          <p>Interest Earned: <span id="interest"></span></p>
+          <p class="top">Maturity Amount: <span class="top" id="maturity"></span></p>
+          <p class="top">Interest Earned: <span class="top" id="interest"></span></p>
         </div>
                
                 <button id="cancel-btn4" class="button button4"
@@ -1864,3 +1864,4 @@ function calculateFD() {
 	
 
 </html>
+
