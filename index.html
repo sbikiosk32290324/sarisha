@@ -218,7 +218,8 @@ width:1000px;
   font-size: 14px;
 
   cursor: pointer;
-  height:20px;
+
+  
 }
 .button:hover {
   background-color: #4a205a;}
@@ -278,7 +279,7 @@ width:1000px;
 {
 	background-color:ff5733;
 	text-align:center;
-	color: #50fa67;
+	color: #faa250;
 	font-size: 12px;
 	text-align:left;
 	}
@@ -293,9 +294,9 @@ width:1000px;
 	}
 .top2
 {
-	background-color:#017941;
+	background-color:#011d10;
 	text-align:center;
-	color:#c5f370 ;
+	color:#d5ff88 ;
 	font-size: 12px;
 	width:50px;
     height:20px;
@@ -303,9 +304,9 @@ width:1000px;
 .top3
 {
 	
-	background-color:#017941;
+	background-color:#011d10;
 	
-	color:#c5f370 ;
+	color:#d5ff88 ;
 	font-size: 16px;
 	width:80px;
     height:20px;
@@ -661,8 +662,11 @@ document.getElementById("Quantity2").max = "1000";
       var mib=document.getElementById("db").value;
         var note23= -(mib)- -(amt23);
       document.getElementById("ac").value=note23;var note23= document.getElementById("ac").value;
+       return multiply();
 	 
 	  text = "মিসমাচ টি খরচের সাথে যুক্ত হয়েছে";
+
+    
   } else {
     text = "মিসমাচ টি খরচের সাথে যুক্ত হয়নি";
   }
@@ -1425,7 +1429,7 @@ function calculateFD() {
 
 <th><input  readonly value="ASRAMMORE BALANCE " class="note" name="note17" />  </th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"   name="ap" id="anup" required></th>
-<th><input type="number" onchange="multiply(this)" id="total17" class="total" name="ap1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total17" class="total" name="ap1" value="0" readonly></th>
 
 
 
@@ -1438,7 +1442,7 @@ function calculateFD() {
 
 <th><input  readonly value="SEORAHATI BALANCE " class="note" name="note18" /> </th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation" name="sp" id="dipika" required></th>
-<th><input type="number" onchange="multiply(this)" id="total18" class="total" name="sp1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total18" class="total" name="sp1" value="0" readonly></th>
 
 
 
@@ -1451,7 +1455,7 @@ function calculateFD() {
 
 <th><input  readonly value="OFFICE STATIONERY PAYMENT " class="note" name="note19" /> </th>
 <th><input type="number" onchange="multiply(this)"  class="needs-validation" name="lb"  id="loan" ></th>
-<th><input type="number" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total19" class="total" name="lb1" value="0" readonly></th>
 
 
 </tr>
@@ -1472,40 +1476,40 @@ function calculateFD() {
 
 <th> <input  readonly value="BC CASH BALANCE " class="note" name="note21" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="bc" name="sb"></th>
-<th><input type="number" onchange="multiply(this)" id="total21" class="total" name="sb1" value="0" readonly></th>
+<th><input type="hidden"onchange="multiply(this)" id="total21" class="total" name="sb1" value="0" readonly></th>
 
 <th><input  readonly value="EXC " class="note" name="note22" /></th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"   id="exc" name="mp"></th>
-<th><input type="number" onchange="multiply(this)" id="total22" class="total" name="mp1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total22" class="total" name="mp1" value="0" readonly></th>
 
-
-</tr>
-<tr>
-
-<th> <input  readonly value="NEGATIVE BALANCE " class="note" name="note23" /></th>
-<th><a type="button"  onclick="add ();" ><input type="number" value=""class="button button4" readonly id="ac" name="ab"></a></th>
-<th><a type="button"  onclick="multiply();"><input type="number" onchange="multiply(this)" id="total23" class="button button4" name="ab1" value="0" readonly></a></th>
-
-
-<th> <input  readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
-<th><input  type="number" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
-<th><input type="number" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
 
 </tr>
 <tr>
 
 <th><input  readonly value="PENDING CASH " class="note" name="note25" /> </th>
 <th><input type="number" onchange="multiply(this)" class="needs-validation"  id="pc" name="pc"></th>
-<th><input type="number" onchange="multiply(this)" id="total25" class="total" name="pc1" value="0" readonly></th>
+<th><input type="hidden" onchange="multiply(this)" id="total25" class="total" name="pc1" value="0" readonly></th>
 
-<th><input  readonly value="OPENING BALANCE " class="note" name="note26" /></th>
-<th><input type="number" class="total" onchange="multiply(this)" name="Quantity26" value="500000" readonly id="ob" required></th>
-<th><input type="number" id="total26" onchange="multiply(this)" class="total" onchange="multiply(this)" name="total26" value="0" readonly></th>
+
+<th> <input  readonly value="MANKHAND BALANCE " class="note" name="note24" /></th>
+<th><input  type="number" onchange="multiply(this)" class="needs-validation"  id="ofe" name="oe"></th>
+<th><input type="hidden" onchange="multiply(this)" id="total24" class="total" name="oe1" value="0" readonly></th>
+
+</tr>
+<tr>
+
+<th></th>
+<th></th>
+<th></th>
+
+<th><input  readonly value="OPENING BALANCE " type="hidden"  class="note" name="note26" /></th>
+<th><input type="hidden"  class="total" onchange="multiply(this)" name="Quantity26" value="500000" readonly id="ob" required></th>
+<th><input type="hidden"  id="total26" onchange="multiply(this)" class="total" onchange="multiply(this)" name="total26" value="0" readonly></th>
 </tr>
 <tr>
 	<th colspan="20"><input class="massage" onchange="multiply(this)" type="massage" id="1input" name="mpa"  ></th></tr>
 
-<tr>  <th colspan="7"><button class="button button4" onclick="myFunction()"><i class="fa fa-save"></i> সংরক্ষণ করুন Save Data</button>
+<tr>  <th colspan="7"><button class="button button4" onclick="myFunction()"><i class="fa fa-save"></i> সংরক্ষণ   </button>
 
 <p  id="demo"></p></th>  </tr>
 
@@ -1514,7 +1518,7 @@ function calculateFD() {
  </div>
     
                 
-                <button id="cancel-btn" 
+                <button id="cancel-btn" class="button button4"
                     onclick="cancelAction1()"><i class="fa fa-close"></i>
                     Cancel
                 </button>
@@ -1545,7 +1549,10 @@ function calculateFD() {
 <th class="top"  scope="col">BC DEPOSIT </th> <th >	<input  type="number" value="0"  class="form-control"  id="bcd" name="bcd"  >	</th>
   </tr>
   <tr>        
-  <th class="top"  scope="col">TOTAL BALANCE </th><th ><input class="top3" type="number" id="TH"   name="TH" value="" required readonly> </th>         
+  <th class="top"  scope="col">TOTAL BALANCE </th><th ><input class="top3" type="number" id="TH"   name="TH" value="" required readonly> </th>  
+  <th> <a type="button"  onclick="multiply();"><input  readonly value="NEGATIVE BALANCE " class="note" name="note23" /></a></th>
+<th><a type="button"  onclick="add ();" ><input type="number" value=""class="button button4" readonly id="ac" name="ab"></a></th>
+<th><input type="hidden"  onchange="multiply(this)" id="total23"  name="ab1" value="0" readonly></a></th>       
 <th></th><th></th>
 <th></th>
 <th></th>
@@ -1596,10 +1603,10 @@ function calculateFD() {
 <tr><td class="top">	MINI STATEMENT		</td><td>	<input  type="number" value="0" class="top4" id="kyc" name="kyc"  >	</td>
 <td class="top">	FI LEGACY</td><td>	<input  type="number" value="0" class="top4" id="pfif" name="pfif"  >	</td>
 </tr>
-<tr><th colspan="3" class="right" ><button class="button button4" target="_blank" href="https://docs.google.com/spreadsheets/d/1n25MUoSsZSz-3fiXNb7mQ6X5YcGzhinip1dxYWh10QY/edit?gid=831137797#gid=831137797">PAST TRANSSACTION</button></th>              
+<tr><th colspan="2" class="right" ><a class="button button4" target="_blank" href="https://docs.google.com/spreadsheets/d/1n25MUoSsZSz-3fiXNb7mQ6X5YcGzhinip1dxYWh10QY/edit?gid=831137797#gid=831137797">TRANSSACTION</a><th colspan="3" class="right"><button type="button" class="button button4" onclick="Search3();">SHOW REPORT</button></th>              
 </tr>
 
-<tr><th colspan="3" class="right"><button type="button" class="button button4" onclick="Search3();">SHOW REPORT</button></th>
+<tr></th>
 </tr>
 <tr><th scope="col" type="hidden"  ></th><th><input type="hidden"  name="sln" id="sln"value="1" readonly ></th>  
 			</tr>
@@ -1667,7 +1674,7 @@ function calculateFD() {
             <input type="number" id="loanTenure" placeholder="Enter months" required>
         </div>
            
-            <button type="button" onclick="calculateEMI()">Calculate EMI</button>
+            <button type="button" class="button button4" onclick="calculateEMI()">Calculate EMI</button>
         </form>
 <div class="result">
         <h3>Monthly EMI: ₹<span id="emiResult">0</span></h3>
@@ -1691,7 +1698,7 @@ function calculateFD() {
         <div class="alert-content">
             <span id="alert-message3"></span>
 <div class="left" >
-<label class="input-group">Calculator</label> 
+<label class="input-group"></label> 
 
 <label class="right">RD Calculator</label> 
 
@@ -1804,26 +1811,28 @@ function calculateFD() {
             <span id="alert-message4"></span>
 
 <h2>FD Calculator</h2>
-        
-        <div class="input-group">
-            <label for="principal">Principal Amount:</label>
-            <input type="number" id="principal" required>
-        </div>
-        <div class="input-group">
-            <label for="rate">Interest Rate (%):</label>
-            <input type="number" id="rat" required>
-        </div>
-        <div class="input-group">
-            <label for="time">Time Period (years):</label>
-            <input type="number" id="time" required>
-        </div>
-        <button onclick="calculateFD()" class="btn btn-primary btn-lg">Calculate</button>
+        <table>
+        <tr class="input-group">
+           <th> <label  for="principal">Principal Amount:</label></th>
+           <th> <input class="needs-validation"  type="number" id="principal" required></th>
+        </tr>
+        <tr class="input-group">
+           <th> <label for="rate">Interest Rate (%):</label></th>
+           <th> <input class="needs-validation"  type="number" id="rat" required></th>
+        </tr>
+        <tr class="input-group">
+           <th> <label  for="time">Time Period (years):</label></th>
+           <th> <input class="needs-validation" type="number" id="time" required></th>
+        </tr>
+        <tr>
+        <th><button onclick="calculateFD()" class="button button4">Calculate</button></th>
+         </table>
         <div class="result">
           <p>Maturity Amount: <span id="maturity"></span></p>
           <p>Interest Earned: <span id="interest"></span></p>
         </div>
-                
-                <button id="cancel-btn4" 
+               
+                <button id="cancel-btn4" class="button button4"
                     onclick="cancelAction4()"><i class="fa fa-close"></i>
                     Cancel
                 </button>
