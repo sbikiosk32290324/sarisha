@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -1305,6 +1303,14 @@ function calculateFD() {
         }
     });
 }
+
+    // check login
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+    }
+
+
+
     </script>
 	
 <h1 class="header"> NABASAN CASH BALANCE </H1>
@@ -1574,7 +1580,7 @@ function calculateFD() {
  <h1 >KO CODE    : 32290324</h1>
  <h1 >BRANCH     : SARISHA</h1>
  <h1 >BRANCH CODE: 05156</h1>
-  
+  <button onclick="logout()">Logout</button>
    </div>
  </div>
     <div class="center">
@@ -1857,6 +1863,13 @@ function calculateFD() {
  <a href="https://docs.google.com/spreadsheets/d/1cLj-UJ3JodVeEi2UVPdqqPbraDtCZzRqziY1CeygWZM/edit?gid=1081196834#gid=1081196834" class="w3-bar-item w3-button"  >KYC LIST</a>
    <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"  style="font-size:20px;color:green">WhatsApp</a>
 </div>
+<script>
+  function logout() {
+  sessionStorage.removeItem("loggedIn");
+  window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+}
+</script>
+
   </body>
 </html>
   
