@@ -1303,6 +1303,9 @@ function calculateFD() {
         }
     });
 }
+if (sessionStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+    }
 
     function logout() {
   sessionStorage.removeItem("loggedIn");
@@ -1870,6 +1873,7 @@ function calculateFD() {
 	
 
 </html>
+
 
 
 
