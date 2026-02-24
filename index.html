@@ -1453,18 +1453,16 @@ window.addEventListener("storage", function(event) {
 window.addEventListener("beforeunload", function() {
     localStorage.setItem("logout-event", Date.now());
 });
-
 window.addEventListener("load", function () {
+    const navEntries = performance.getEntriesByType("navigation");
 
-    const nav = performance.getEntriesByType("navigation")[0];
-
-    if (nav.type === "reload" || nav.type === "navigate") {
+    if (navEntries.length > 0 && navEntries[0].type === "reload") {
         // Redirect to logout page
         window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // use logout.php if using PHP session
+        // or "logout.php" if using PHP
     }
-
 });
+
  var logoutTime = 30 * 60 * 1000;
 
     setTimeout(function() {
@@ -2060,6 +2058,7 @@ window.addEventListener("load", function () {
 	
 
 </html>
+
 
 
 
