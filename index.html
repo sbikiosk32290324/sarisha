@@ -780,6 +780,16 @@ document.getElementById("Quantity2").max = "1000";
           
 	    
 	  }
+		 function validateForm() {
+            var value = document.getElementById("db").value;
+
+            if (value != 0) {
+                alert("মিসমাচ ব্যালান্স টি কে ০ করতে হবে");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
 	  
 	  function add() {
   let text = "আপনি নিশ্চিত তো ? \nAre you sure? \nমিসমাচ টি একাউন্ট ব্যালান্স  এর সাথে যুক্ত হবে \nThe mismatch will be added to the account balance.";
@@ -1502,7 +1512,7 @@ window.addEventListener("load", function () {
 </head>
 <body >
 
-  <form     id="form"   >
+  <form     id="form"  onsubmit="return validateForm()" >
 	  
                   
 					
@@ -2068,6 +2078,7 @@ window.addEventListener("load", function () {
 	
 
 </html>
+
 
 
 
