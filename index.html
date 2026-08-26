@@ -1616,32 +1616,32 @@ function calculateFD() {
         }
     });
 }
-if (!localStorage.getItem("loggedIn")) {
- window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-}
+// if (!localStorage.getItem("loggedIn")) {
+//  window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+// }
 
-function logout() {
-localStorage.removeItem("loggedIn");
-window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-}
-// Detect logout in other tabs
-window.addEventListener("storage", function(event) {
-    if (event.key === "logout-event") {
-        window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-    }
-});
+// function logout() {
+// localStorage.removeItem("loggedIn");
+// window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+// }
+// // Detect logout in other tabs
+// window.addEventListener("storage", function(event) {
+//     if (event.key === "logout-event") {
+//         window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
+//     }
+// });
 
-// When closing tab
-window.addEventListener("beforeunload", function() {
-    localStorage.setItem("logout-event", Date.now());
-});
-window.addEventListener("load", function () {
-   const navEntries = performance.getEntriesByType("navigation");
+// // When closing tab
+// window.addEventListener("beforeunload", function() {
+//     localStorage.setItem("logout-event", Date.now());
+// });
+// window.addEventListener("load", function () {
+//    const navEntries = performance.getEntriesByType("navigation");
 
-   if (navEntries.length > 0 && navEntries[0].type === "reload") {
-        // Redirect to logout page
-      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // or "logout.php" if using PHP
+//    if (navEntries.length > 0 && navEntries[0].type === "reload") {
+//         // Redirect to logout page
+//       window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
+//         // or "logout.php" if using PHP
  }
 });
 //window.addEventListener("load", function () {
