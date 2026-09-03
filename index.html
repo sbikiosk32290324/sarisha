@@ -1616,63 +1616,7 @@ function calculateFD() {
         }
     });
 }
-//if (!localStorage.getItem("loggedIn")) {
-// window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-///}
 
-//function logout() {
-//localStorage.removeItem("loggedIn");
-//window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-//}
-// Detect logout in other tabs
-//window.addEventListener("storage", function(event) {
-//    if (event.key === "logout-event") {
-//        window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-    }
-});
-
-// When closing tab
-//window.addEventListener("beforeunload", function() {
-  //  localStorage.setItem("logout-event", Date.now());
-});
-//window.addEventListener("load", function () {
-//   const navEntries = performance.getEntriesByType("navigation");
-
-//   if (navEntries.length > 0 && navEntries[0].type === "reload") {
-        // Redirect to logout page
-//      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // or "logout.php" if using PHP
- }
-});
-//window.addEventListener("load", function () {
-
-   // const nav = performance.getEntriesByType("navigation")[0];
-
-  //  if (nav.type === "reload" || nav.type === "navigate") {
-        // Redirect to logout page
-  //      window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // use logout.php if using PHP session
- //   }
-
-//});
-// var logoutTime = 30 * 60 * 1000;
-
- //  setTimeout(function() {
-//      alert("Session expired. Logging out...");
-//     window.location.href = "https://sbikiosk32290324.github.io/nabasan2/"; 
-        // or logout.php if using PHP
- //   }, logoutTime);
-
-		
-		
-//if (sessionStorage.getItem("loggedIn") !== "true") {
-  //   window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
- //   }
-
-   // function logout() {
- // sessionStorage.removeItem("loggedIn");
-  //window.location.href = "https://sbikiosk32290324.github.io/nabasan2/";
-//}
 
     </script>
 	
@@ -1809,8 +1753,8 @@ function calculateFD() {
 <th><input type="number" id="Quantity14" onchange="multiply(this)" class="needs-validation"    name="c5"  /></th>
 <th><input type="number" id="total14" class="total" name="amtc5" value="0" readonly></th>
 
-<th><input type="hidden"  readonly value="SEORAHATI BALANCE " class="note" name="note18" /> </th>
-<th><input type="hidden" onchange="multiply(this)" class="needs-validation" name="sp" id="dipika" required></th>
+<th><input   readonly value="SEORAHATI BALANCE " class="note" name="note18" /> </th>
+<th><input  onchange="multiply(this)" class="needs-validation" name="sp" id="dipika" required></th>
 <th><input type="hidden" onchange="multiply(this)" id="total18" class="total" name="sp1" value="0" readonly></th>
 
 
